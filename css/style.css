@@ -1,0 +1,14 @@
+.contactform {
+    margin-top: 50%;
+}
+
+/*Form validation*/
+.err-msg {
+    padding: 10px;
+    color: #ff5858;
+    text-align: center;
+}
+
+input.red {
+    border: 1px solid red !important;
+}

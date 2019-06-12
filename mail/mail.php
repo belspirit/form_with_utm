@@ -49,14 +49,13 @@ $udataUag = getUtmField('sb_udata_uag');
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru';                       // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'pansheitan@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'maslov2005'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->Username = 'mail@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'password'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
-$mail->setFrom('pansheitan@yandex.ru'); // от кого будет уходить письмо?
-$mail->addAddress('andrei.maslau@gmail.com');     // Кому будет уходить письмо
-$mail->addAddress('info@labetik.media');     // Кому будет уходить письмо
+$mail->setFrom('mail@yandex.ru'); // от кого будет уходить письмо?
+$mail->addAddress('some.mail@gmail.com');     // Кому будет уходить письмо
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -65,7 +64,7 @@ $mail->addAddress('info@labetik.media');     // Кому будет уходит
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с сайта Steklofest.by';
+$mail->Subject = 'Заявка с сайта';
 $mail->Body = '<h3>Контактные данные клиента</h3>';
 $mail->Body .= 'Имя клиента: <strong>' . $name . '</strong><br>Номер телефона: <strong>' . $phone . '</strong>';
 
