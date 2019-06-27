@@ -24,6 +24,7 @@ function placeData(sb) {
 
             //call function every time when we need to put one Utm parameter to the input for each form
 
+            addUtmField('sb_first_typ', sb.first.typ, el); //first Type
             addUtmField('sb_first_src', sb.first.src, el); //first utm_source
             addUtmField('sb_first_mdm', sb.first.mdm, el); //first utm_medium
             addUtmField('sb_first_cmp', sb.first.cmp, el); //first utm_campaign
