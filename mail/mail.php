@@ -18,28 +18,29 @@ function getUtmField($fieldName){
     }
 }
 
-$firstSrc = getUtmField('sb_first_src');
-$firstMdm = getUtmField('sb_first_mdm');
-$firstCmp = getUtmField('sb_first_cmp');
-$firstCnt = getUtmField('sb_first_cnt');
-$firstTrm = getUtmField('sb_first_trm');
-$currentTyp = getUtmField('sb_current_typ');
-$currentSrc = getUtmField('sb_current_src');
-$currentMdm = getUtmField('sb_current_mdm');
-$currentCmp = getUtmField('sb_current_cmp');
-$currentCnt = getUtmField('sb_current_cnt');
-$currentTrm = getUtmField('sb_current_trm');
-$firstAddfd = getUtmField('sb_first_add_fd');
-$firstAddep = getUtmField('sb_first_add_ep');
-$firstAddRf = getUtmField('sb_first_add_rf');
+$firstTyp     = getUtmField('sb_first_typ');
+$firstSrc     = getUtmField('sb_first_src');
+$firstMdm     = getUtmField('sb_first_mdm');
+$firstCmp     = getUtmField('sb_first_cmp');
+$firstCnt     = getUtmField('sb_first_cnt');
+$firstTrm     = getUtmField('sb_first_trm');
+$currentTyp   = getUtmField('sb_current_typ');
+$currentSrc   = getUtmField('sb_current_src');
+$currentMdm   = getUtmField('sb_current_mdm');
+$currentCmp   = getUtmField('sb_current_cmp');
+$currentCnt   = getUtmField('sb_current_cnt');
+$currentTrm   = getUtmField('sb_current_trm');
+$firstAddfd   = getUtmField('sb_first_add_fd');
+$firstAddep   = getUtmField('sb_first_add_ep');
+$firstAddRf   = getUtmField('sb_first_add_rf');
 $currentAddFd = getUtmField('sb_current_add_fd');
 $currentAddEp = getUtmField('sb_current_add_ep');
 $currentAddRf = getUtmField('sb_current_add_rf');
-$sessionPgs = getUtmField('sb_session_pgs');
-$sessionCpg = getUtmField('sb_session_cpg');
-$udataVst = getUtmField('sb_udata_vst');
-$udataUip = getUtmField('sb_udata_uip');
-$udataUag = getUtmField('sb_udata_uag');
+$sessionPgs   = getUtmField('sb_session_pgs');
+$sessionCpg   = getUtmField('sb_session_cpg');
+$udataVst     = getUtmField('sb_udata_vst');
+$udataUip     = getUtmField('sb_udata_uip');
+$udataUag     = getUtmField('sb_udata_uag');
 
 
 
@@ -71,6 +72,7 @@ $mail->Body .= 'Имя клиента: <strong>' . $name . '</strong><br>Ном�
 $mail->Body .= '<h2 style="color:red">Данные по UTM меткам</h2>';
 
 $mail->Body .= '<h3 style="color:red">Первый визит</h3>';
+$mail->Body .= '<p>Тип трафика первого визита: <strong>' . $firstTyp . '</strong><br>';
 $mail->Body .= '<p>Источник первого визита: <strong>' . $firstSrc . '</strong><br>';
 $mail->Body .= 'Канал первого визита: <strong>' . $firstMdm . '</strong><br>';
 $mail->Body .= 'Кампания первого визита: <strong>' . $firstCmp . '</strong><br>';
